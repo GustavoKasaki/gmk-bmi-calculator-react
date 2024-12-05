@@ -1,0 +1,21 @@
+.window {
+    width: 600px;
+    height: 600px;
+    background-color: #27ae60;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.window.slide-up {
+    opacity: 1;
+    transform: translateY(0);
+}
