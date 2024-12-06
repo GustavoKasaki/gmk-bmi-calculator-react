@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Header from './Header/Header';
 import Input from './Input/Input';
+import Result from './Result/Result';
 import './Window.scss';
 
 const Window: React.FC = () => {
@@ -15,6 +16,7 @@ const Window: React.FC = () => {
         <div className={`window ${isVisible ? 'slide-up' : ''}`}>
             <Header />
             <Input />
+            <Result />
         </div>
     )
 }

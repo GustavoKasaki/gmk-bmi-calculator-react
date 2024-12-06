@@ -1,0 +1,18 @@
+.input {
+    width: 300px;
+
+    &__weight, &__height {
+        margin: 12px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    label {
+        margin: 0 auto;
+    }
+
+    input {
+        height: 2em;
+        text-align: center;
+    }
+}

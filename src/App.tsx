@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Window from './components/Window/Window';
+import Window from './components/Window';
 
 function App() {
 

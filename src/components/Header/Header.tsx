@@ -1,5 +1,5 @@
 import './Header.scss';
-import icon from '../../../assets/icon.png'
+import icon from '../../assets/icon.png'
 
 const Header: React.FC = () => {
     return (
