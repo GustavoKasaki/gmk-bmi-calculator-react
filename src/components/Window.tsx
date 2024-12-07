@@ -6,6 +6,7 @@ import './Window.scss';
 
 const Window: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const [BMI, setBMI] = useState<number | null>(null);
 
     useEffect(() => {
         const timer = setTimeout(() => setIsVisible(true), 100);
@@ -15,8 +16,8 @@ const Window: React.FC = () => {
     return (
         <div className={`window ${isVisible ? 'slide-up' : ''}`}>
             <Header />
-            <Input />
-            <Result />
+            <Input setBMI={setBMI} />
+            <Result BMI={BMI} />
         </div>
     )
 }

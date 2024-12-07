@@ -1,11 +1,15 @@
 import './Result.scss'
 
-const Result = () => {
+interface ResultProps {
+    BMI: number | null;
+}
+
+const Result: React.FC<ResultProps> = ({ BMI }) => {
     return (
         <>
             <div className="result">
                 <h3>Your BMI is:</h3>
-                <span>20 kg/m²</span>
+                <span>{BMI} kg/m²</span>
             </div>
             <div className="chart">
                 <h3 className='chart__title'>BMI values for adults:</h3>
