@@ -1,19 +1,28 @@
 .input {
-    width: 300px;
+    display: flex;
+    gap: 12px;
 
-    &__weight, &__height {
+    button {
         margin: 12px 0;
-        display: flex;
-        justify-content: space-between;
     }
 
-    label {
-        margin: 0 auto;
-        line-height: 26px;
-    }
-
-    input {
-        height: 2em;
-        text-align: center;
+    &__fields {
+        width: 250px;
+    
+        &__weight, &__height {
+            margin: 12px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        label {
+            margin: 0 auto;
+            line-height: 26px;
+        }
+    
+        input {
+            height: 2em;
+            text-align: center;
+        }
     }
 }
