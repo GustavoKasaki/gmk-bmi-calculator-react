@@ -1,10 +1,24 @@
 import './Result.scss'
 
 interface ResultProps {
-    BMI: number | null;
+    BMI: number | null,
+    activeCategory: string | null;
 }
 
-const Result: React.FC<ResultProps> = ({ BMI }) => {
+const Result: React.FC<ResultProps> = ({ BMI, activeCategory }) => {
+    console.log("Updated category to:", activeCategory);
+
+    const categories = [
+        {name: "Severe Thinness", range: "<16"},
+        {name: "Moderate Thinness", range: "16 ~ 17"},
+        {name: "Mild Thinness", range: "17 ~ 18,5"},
+        {name: "Normal", range: "18,5 ~ 25"},
+        {name: "Overweight", range: "25 ~ 30"},
+        {name: "Obese Class I", range: "30 ~ 35"},
+        {name: "Obese Class II", range: "35 ~ 40"},
+        {name: "Obese Class III", range: ">40"}
+    ]
+
     return (
         <>
             <div className="result">
@@ -14,38 +28,12 @@ const Result: React.FC<ResultProps> = ({ BMI }) => {
             <div className="chart">
                 <h3 className='chart__title'>BMI values for adults:</h3>
                 <ul className='chart__table'>
-                    <li className='chart__table__item'>
-                        <p>Severe Thinness</p>
-                        <p>{'<16'}</p>
-                    </li>
-                    <li className='chart__table__item'>
-                        <p>Moderate Thinness</p>
-                        <p>16 ~ 17</p>
-                    </li>
-                    <li className='chart__table__item'>
-                        <p>Mild Thinness</p>
-                        <p>17 ~ 18,5</p>
-                    </li>
-                    <li className='chart__table__item chart__table__item--isActive'>
-                        <p>Normal</p>
-                        <p>18,5 ~ 25</p>
-                    </li>
-                    <li className='chart__table__item'>
-                        <p>Overweight</p>
-                        <p>25 ~ 30</p>
-                    </li>
-                    <li className='chart__table__item'>
-                        <p>Obese Class I</p>
-                        <p>30 ~ 35</p>
-                    </li>
-                    <li className='chart__table__item'>
-                        <p>Obese Class II</p>
-                        <p>35 ~ 40</p>
-                    </li>
-                    <li className='chart__table__item'>
-                        <p>Obese Class III</p>
-                        <p>{'>40'}</p>
-                    </li>
+                    {categories.map((category) => (
+                        <li key={category.name} className={`chart__table__item ${category.name === activeCategory ? 'chart__table__item--isActive' : ''}`}>
+                            <p>{category.name}</p>
+                            <p>({category.range})</p>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </>
