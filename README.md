@@ -23,7 +23,7 @@ This project is a **Body Mass Index (BMI) Calculator** built with **React**. The
 1. Make sure your device has Git and Node.js installed.
 2. Clone this repository to a folder in your device:
    ```sh
-   git clone https://github.com/GustavoKasaki/gmk-bmi-calculator-react
+   git clone https://github.com/GustavoKasaki/gmk-bmi-calculator-react.git
    ```
 4. Install the project's dependencies:
    ```sh
