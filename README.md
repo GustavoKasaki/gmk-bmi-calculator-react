@@ -1,4 +1,4 @@
-# **BMI Calculator with React/Redux**
+# **BMI Calculator with React**
 
 ## **Description**
 This project is a **Body Mass Index (BMI) Calculator** built with **React**. The application allows users to quickly calculate their BMI and determine their weight category based on the result.
