@@ -1,10 +1,7 @@
-import { useState } from 'react';
-import Window from './components/Window';
+import Window from "./components/Window";
 
 function App() {
-  return (
-    <Window />
-  )
+  return <Window />;
 }
 
-export default App
+export default App;
