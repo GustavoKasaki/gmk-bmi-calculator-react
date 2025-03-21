@@ -2,6 +2,8 @@
 
 ## **Description**
 This project is a **Body Mass Index (BMI) Calculator** built with **React**. The application allows users to quickly calculate their BMI and determine their weight category based on the result.
+![image](https://github.com/user-attachments/assets/5778ea30-b161-4792-a027-d25e8e96a659)
+
 
 ## **Main Features**
 - Input fields for weight and height
